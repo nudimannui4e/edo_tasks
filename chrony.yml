@@ -1,0 +1,5 @@
+---
+- name: Chrony
+  hosts: localhost
+  roles:
+    - chrony

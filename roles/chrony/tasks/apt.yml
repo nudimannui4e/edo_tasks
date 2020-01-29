@@ -1,0 +1,6 @@
+---
+- name: Install Chrony (apt)
+  apt:
+    name: "{{ item }}"
+    state: installed
+  with_items: "{{ chrony_packages }}"

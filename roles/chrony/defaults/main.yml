@@ -1,0 +1,13 @@
+---
+# defaults file for ansible-role-chrony
+
+chrony_packages:
+  - chrony
+
+chrony_config_server:
+  - 10.0.0.20
+  - 10.0.0.159
+
+chrony_config_allow: []
+
+chrony_config_logdir: '/var/log/chrony'

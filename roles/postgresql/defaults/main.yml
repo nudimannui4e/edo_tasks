@@ -1,0 +1,6 @@
+---
+# defaults credentials for PostgreSQL
+
+psql_db_name: el
+psql_db_user: el
+psql_db_passwd: el
