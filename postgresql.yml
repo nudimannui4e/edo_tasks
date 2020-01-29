@@ -1,0 +1,5 @@
+---
+- name: PostgreSQL 12
+  hosts: localhost
+  roles:
+    - postgresql
