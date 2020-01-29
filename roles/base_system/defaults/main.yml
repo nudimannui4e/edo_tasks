@@ -1,0 +1,19 @@
+host_name: localhost
+
+packages_edo:
+  - mc
+  - mtr-tiny
+  - iptraf-ng
+  - sysstat
+  - fatrace
+  - zstd
+  - psmisc
+  - screen
+  - pv
+
+packages_el:
+  - sudo
+  - vim
+  - htop
+  - git
+  - net-tools

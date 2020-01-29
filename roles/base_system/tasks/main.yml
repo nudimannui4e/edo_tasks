@@ -1,0 +1,30 @@
+---
+# Configure NameServer
+- name: Configure nameserver
+  template:
+    src: "resolv.conf.j2"
+    dest: "/etc/resolv.conf"
+  tags: nameserver
+
+# Configure hostname
+- name: Configure hostname
+  hostname:
+    name: "{{ host_name }}"
+
+# Install edo minimal apt
+- name: Install edo minimal apt
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - "{{ packages_edo }}"
+  tags: edo_apt
+
+# Install el minimal apt
+- name: Install el apt
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - "{{ packages_el }}"
+  tags: el_apt
