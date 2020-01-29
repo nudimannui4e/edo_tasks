@@ -2,5 +2,5 @@
 - name: Install Chrony (apt)
   apt:
     name: "{{ item }}"
-    state: installed
+    state: latest
   with_items: "{{ chrony_packages }}"
