@@ -1,5 +1,8 @@
 ---
 #defaults setting for SSH
+sshd_config_path: '/etc/ssh/sshd_config'
+sshd_service_name: sshd
+
 sshd_port: 22
 sshd_use_dns: "no"
 
