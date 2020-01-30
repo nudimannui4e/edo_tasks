@@ -23,4 +23,3 @@
     - { regexp: "^#?PermitRootLogin", line: "PermitRootLogin {{ sshd_permit_root_login }}" }
     - { regexp: "^PasswordAuthentication", line: "PasswordAuthentication {{ sshd_password_authentication }}" }
   notify: restart sshd
-  when: sshd_security
