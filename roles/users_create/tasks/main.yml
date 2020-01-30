@@ -1,7 +1,0 @@
----
-# Create 2 users:
-# Edo, nudimannui4e
-# ssh_key >> authorized_key
-# sshd - only ssh_keys
-
-- name: 

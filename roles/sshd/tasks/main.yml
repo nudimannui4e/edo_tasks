@@ -1,0 +1,26 @@
+---
+# ssh_key >> authorized_key
+# sshd - only ssh_keys
+
+- name: Update SSH Conf
+  lineinfile: >
+    dest={{ sshd_config_path }}
+    regexp="{{ item.regexp }}"
+    line="{{ item.line }}"
+    state=present
+  with_items:
+    - { regexp: "^#?Port", line: "Port {{ sshd_port }}" }
+    - { regexp: "^#?UseDNS", line: "UseDNS {{ sshd_use_dns }}" }
+  notify: restart sshd
+
+- name: Update SSH configuration to be more secure.
+  lineinfile: >
+    dest={{ sshd_config_path }}
+    regexp="{{ item.regexp }}"
+    line="{{ item.line }}"
+    state=present
+  with_items:
+    - { regexp: "^#?PermitRootLogin", line: "PermitRootLogin {{ sshd_permit_root_login }}" }
+    - { regexp: "^PasswordAuthentication", line: "PasswordAuthentication {{ sshd_password_authentication }}" }
+  notify: restart sshd
+  when: sshd_security

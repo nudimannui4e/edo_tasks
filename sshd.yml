@@ -1,0 +1,5 @@
+---
+- name: sshd config
+  hosts: localhost
+  roles:
+    - sshd

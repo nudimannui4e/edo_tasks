@@ -1,0 +1,7 @@
+---
+#defaults setting for SSH
+sshd_port: 22
+sshd_use_dns: "no"
+
+sshd_permit_root_login: "yes"
+sshd_password_authentication: "no"
