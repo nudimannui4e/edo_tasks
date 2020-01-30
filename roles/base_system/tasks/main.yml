@@ -6,6 +6,20 @@
     dest: "/etc/resolv.conf"
   tags: nameserver
 
+# Configure source.list.d
+- name: Configure source.list.d
+  template:
+    src: "99gkdionis.sources.list.j2"
+    dest: "/etc/apt/sources.list.d/99gkdionis.sources.list"
+  tags: source_list
+
+# Configure apt.conf.d
+- name: Configure apt.conf.d
+  template:
+    src: "99gkdionis.j2"
+    dest: "/etc/apt/apt.conf.d/99gkdionis"
+  tags: apt.conf.d
+  
 # Configure hostname
 - name: Configure hostname
   hostname:
