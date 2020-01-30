@@ -1,8 +1,8 @@
 # name users
 
-- user_name:
+- unix_name:
   - nudimannui4e
   - edo
 
-- user_pass:
-  - 111
+- unix_grope:
+  - sudo

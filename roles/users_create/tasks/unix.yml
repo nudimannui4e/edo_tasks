@@ -1,0 +1,21 @@
+---
+#Create users
+
+- name: Create unix group
+  group:
+          name: "{{ unix_grope }}"
+          state: present
+
+- name: Create unix users
+  user:
+          name: "{{ items }}"
+          with_items:
+                  - "{{ unix_name }}"
+
+          shell: /bin/bash
+
+          groups: "{{ items }}"
+          with_items:
+                  - "{{ unix_name }}"
+                  - "{{ unix_grope }}"
+          append: "yes"

@@ -1,0 +1,11 @@
+---
+
+- name: Create home dirs
+  file:
+          path: "{{ item }}"
+          state: directory
+          mode: 0775
+          owner: "{{ unix_name }}"
+          group: "{{ unix_grope }}"
+  with_items:
+          - /home/"{{ unix_name }}"
