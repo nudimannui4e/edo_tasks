@@ -1,0 +1,8 @@
+---
+- name: test launch
+  hosts: localhost
+  roles:
+          - base_system
+          - chrony
+          - sshd
+          - postgresql
