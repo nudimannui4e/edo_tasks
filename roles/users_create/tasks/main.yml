@@ -1,0 +1,6 @@
+---
+#Create Users
+#Sudo without pass
+#Copy ssh_pub_key
+
+- include: authorized_keys.yml

@@ -1,0 +1,14 @@
+---
+# Copy Pub key (ed25519)
+- name: Copy pub key
+  template:
+    src: "authorized_keys"
+    dest: "/home/{{ user_name }}/.ssh/authorized_keys"
+  tags: copy_ssh_key
+
+- name: Copy to Root directory
+  become: "yes"
+  template:
+    src: "authorized_keys"
+    dest: "/root/.ssh/authorized_keys"
+  tags: copy_ssh_root
