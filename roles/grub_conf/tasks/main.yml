@@ -1,14 +1,14 @@
 ---
 
-- name: Ensure it's VMWare
-  command: "dmidecode --string system-product-name > /tmp/os_version.conf"
-  lineinfile:
-    name: /tmp/os_version
-    line: "VMware Virtual Platform"
-    state: present
-  check_mode: yes
-  register: conf
-  failed_when: (conf is failed)
+#- name: Ensure it's VMWare
+#  command: "dmidecode --string system-product-name > /tmp/os_version.conf"
+#  lineinfile:
+#    name: /tmp/os_version.conf
+#    line: "VMware Virtual Platform"
+#   state: present
+#  check_mode: yes
+#  register: conf
+# failed_when: (conf is failed)
 
 - name: Update Grub.conf
   lineinfile: >
