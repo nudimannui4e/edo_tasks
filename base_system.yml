@@ -1,3 +1,9 @@
+# instgall apt
+# change apt.conf.d
+# change sources.list.d
+# change nameservers 
+# change hostname
+
 ---
 - name: base system
   hosts: localhost

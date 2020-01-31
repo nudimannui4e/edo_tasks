@@ -1,5 +1,6 @@
+# Fix grub.conf
+# GRUB_CMDLINE_LINUX_DEFAULT="nomodeset consoleblank=0 systemd.show_status=true elevator=noop"
 ---
-
 - name: Grub config
   hosts: localhost
   roles:

@@ -1,3 +1,10 @@
+# Install PostgreSQL 12
+# From testing branch
+# db_user = el
+# db_name = el
+# db_pass = el
+# db_encoding = utf-8
+
 ---
 - name: PostgreSQL 12
   hosts: localhost

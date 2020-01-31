@@ -1,3 +1,6 @@
+# Install chrony, service to startup
+# Change NTP servers
+
 ---
 - name: Chrony
   hosts: localhost

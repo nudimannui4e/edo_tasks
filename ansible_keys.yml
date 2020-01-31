@@ -1,5 +1,5 @@
 ---
 - name: Ansible keys
-  hosts: "{{ Ansible_hosts }}" 
+  hosts: localhost 
   roles:
       - ansible_keys

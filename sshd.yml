@@ -1,3 +1,7 @@
+# Change port (optional)
+# Open root_login
+# Close password_login
+
 ---
 - name: sshd config
   hosts: localhost

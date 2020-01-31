@@ -1,5 +1,12 @@
----
+# Create users and group
+# edo, nudimannui4e
+# set users pass : 111
+# set root pass: It’saCheshirecat
+# Copy ssh authorized_key to /home/***/.ssh and /root/.ssh
 
+## Pass isn't crypted in *yml, sorry
+
+---
 - name: Create Users
   hosts: localhost
   roles:

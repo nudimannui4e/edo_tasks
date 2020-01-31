@@ -1,9 +1,10 @@
 ---
-- name: test launch
+- name: test play
   hosts: localhost
   roles:
           - base_system
           - chrony
+          - grub_conf
           - users_create
           - sshd
           - postgresql
