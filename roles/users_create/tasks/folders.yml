@@ -16,4 +16,10 @@
           owner: "{{ unix_name_edo }}"
           group: "{{ unix_grope_edo }}"
 
-
+- name: Create .ssh to root
+  file:
+          path: /root/.ssh
+          state: directory
+          mode: 0775
+          owner: root
+          group: root

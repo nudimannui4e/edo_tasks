@@ -9,6 +9,7 @@
 - name: Create unix user Nudimannui4e
   user:
           name: "{{ unix_name_el }}"
+          update_password: always
           password: "{{ unix_pass_user }}"
           shell: /bin/bash
           groups: ["{{ unix_grope_el  }}", sudo]
@@ -22,6 +23,7 @@
 - name: Create unix user Edo
   user:
           name: "{{ unix_name_edo }}"
+          update_password: always
           password: "{{ unix_pass_user }}"
           shell: /bin/bash
           groups: ["{{ unix_grope_edo }}", sudo]
