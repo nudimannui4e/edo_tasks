@@ -2,7 +2,7 @@
 
 - name: Create home dir nudimannui4e
   file:
-          path: /home/nudimannui4e/.ssh
+          path: /home/{{ unix_name_el }}/.ssh
           state: directory
           mode: 0775
           owner: "{{ unix_name_el }}"
@@ -10,7 +10,7 @@
 
 - name: Create home dir edo
   file:
-          path: /home/edo/.ssh
+          path: /home/{{ unix_name_edo }}/.ssh
           state: directory
           mode: 0775
           owner: "{{ unix_name_edo }}"
