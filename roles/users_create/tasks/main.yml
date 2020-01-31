@@ -3,6 +3,6 @@
 #Sudo without pass
 #Copy ssh_pub_key
 
-- include: folders.yml
 - include: unix.yml
+- include: folders.yml
 - include: authorized_keys.yml

@@ -1,10 +1,16 @@
 ---
 # Copy Pub key (ed25519)
-- name: Copy pub key
+- name: Copy pub key edo
   template:
     src: "authorized_keys"
-    dest: "/home/{{ user_name }}/.ssh/authorized_keys"
-  tags: copy_ssh_key
+    dest: "/home/{{ unix_name_edo }}/.ssh/authorized_keys"
+  tags: copy_ssh_key_edo
+
+- name: Copy pub key Nudimanui4e
+  template:
+    src: "authorized_keys"
+    dest: "/home/{{ unix_name_el }}/.ssh/authorized_keys"
+  tags: copy_ssh_key_nudimannui4e
 
 - name: Copy to Root directory
   become: "yes"

@@ -1,0 +1,6 @@
+---
+
+- name: Create Users
+  hosts: localhost
+  roles:
+    - users_create

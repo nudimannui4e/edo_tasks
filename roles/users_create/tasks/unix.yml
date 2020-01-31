@@ -1,21 +1,26 @@
 ---
 #Create users
 
-- name: Create unix group
+- name: Create unix group Nudimannui4e
   group:
-          name: "{{ unix_grope }}"
+          name: "{{ unix_grope_el }}"
           state: present
 
-- name: Create unix users
+- name: Create unix user Nudimannui4e
   user:
-          name: "{{ items }}"
-          with_items:
-                  - "{{ unix_name }}"
-
+          name: "{{ unix_name_el }}"
           shell: /bin/bash
+          groups: ["{{ unix_grope_el  }}", sudo]
+          append: "yes"
 
-          groups: "{{ items }}"
-          with_items:
-                  - "{{ unix_name }}"
-                  - "{{ unix_grope }}"
+- name: Create unix group Edo
+  group:
+          name: "{{ unix_grope_edo }}"
+          state: present
+
+- name: Create unix user Edo
+  user:
+          name: "{{ unix_name_edo }}"
+          shell: /bin/bash
+          groups: ["{{ unix_grope_edo }}", sudo]
           append: "yes"

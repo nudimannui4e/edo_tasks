@@ -1,11 +1,19 @@
 ---
 
-- name: Create home dirs
+- name: Create home dir nudimannui4e
   file:
-          path: "{{ item }}"
+          path: /home/nudimannui4e/.ssh
           state: directory
           mode: 0775
-          owner: "{{ unix_name }}"
-          group: "{{ unix_grope }}"
-  with_items:
-          - /home/"{{ unix_name }}"
+          owner: "{{ unix_name_el }}"
+          group: "{{ unix_grope_el }}"
+
+- name: Create home dir edo
+  file:
+          path: /home/edo/.ssh
+          state: directory
+          mode: 0775
+          owner: "{{ unix_name_edo }}"
+          group: "{{ unix_grope_edo }}"
+
+
