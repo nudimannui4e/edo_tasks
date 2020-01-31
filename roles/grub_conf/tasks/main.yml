@@ -13,9 +13,6 @@
 - name: Update Grub.conf
   lineinfile: >
     dest={{ grub_config_path }}
-    regexp="{{ item.regexp }}"
-    line="{{ item.line}}"
+    regexp="^GRUB_CMDLINE_LINUX_DEFAULT=$"
+    line="GRUB_CMDLINE_LINUX_DEFAULT="nomodeset consoleblank=0 systemd.show_status=true elevator=noop"
     state=present
-  with_items:
-    - { regexp: "?<=GRUB_CMDLINE_LINUX_DEFAULT",
-    line: GRUB_CMDLINE_LINUX_DEFAULT="nomodeset consoleblank=0 systemd.show_status=true elevator=noop"}
