@@ -1,0 +1,6 @@
+---
+
+- name: Grub config
+  hosts: localhost
+  roles:
+          - grub_conf

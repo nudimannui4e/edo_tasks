@@ -1,3 +1,4 @@
 ---
 
-grub_config_path = /etc/default/grub
+grub_config_path : '/etc/default/grub'
+grub_fix : 'GRUB_CMDLINE_LINUX_DEFAULT="nomodeset consoleblank=0 systemd.show_status=true elevator=noop" '

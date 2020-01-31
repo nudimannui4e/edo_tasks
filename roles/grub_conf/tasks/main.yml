@@ -11,8 +11,8 @@
 # failed_when: (conf is failed)
 
 - name: Update Grub.conf
-  lineinfile: >
-    dest={{ grub_config_path }}
-    regexp="^GRUB_CMDLINE_LINUX_DEFAULT=$"
-    line="GRUB_CMDLINE_LINUX_DEFAULT="nomodeset consoleblank=0 systemd.show_status=true elevator=noop"
-    state=present
+  lineinfile:
+          dest: "{{ grub_config_path }}"
+          regexp: "^GRUB_CMDLINE_LINUX_DEFAULT=*"
+          line: "{{ grub_fix }}"
+          state: present 
